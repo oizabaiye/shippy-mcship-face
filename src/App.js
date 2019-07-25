@@ -1,15 +1,13 @@
 import React from 'react';
 import './App.css';
+import Header from './components/Header'
 import ShipList from './components/ShipList'
 
 
 function App() {
   return (
-   
       <div className="App">
-        <header className="App-header">
-          <h1>A List of Starships</h1>
-        </header>
+        <Header />
         <main>
           <ShipList />
         </main>
