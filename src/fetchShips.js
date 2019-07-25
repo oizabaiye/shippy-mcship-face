@@ -1,10 +1,11 @@
-const FETCH_BEGIN = 'FETCH_BEGIN'
-const FETCH_SUCCESS = 'FETCH_SUCCESS'
-const FETCH_FAILURE = 'FETCH_FAILURE'
+export const FETCH_BEGIN = 'FETCH_BEGIN'
+export const FETCH_SUCCESS = 'FETCH_SUCCESS'
+export const FETCH_FAILURE = 'FETCH_FAILURE'
 
 
 const fetchBegin = () => ({
-  type: FETCH_BEGIN
+  type: FETCH_BEGIN,
+  // payload: { isLoading }
 })
 
 const fetchSuccess = (shipData) => ({
@@ -18,7 +19,7 @@ const fetchFailure = (error) => ({
 })
 
 
-const fetchShips = () => {
+export const fetchShips = () => {
   return dispatch => {
     dispatch(fetchBegin())
     return fetch("https://swapi.co/api/starships/")
@@ -31,20 +32,3 @@ const fetchShips = () => {
   }
 }
 
-// componentDidMount() {
-//   fetch('https://swapi.co/api/starships/')
-//   .then(response => {
-//     if (!response.ok) {
-//       throw Error(response.statusText)
-//     }
-//     return response.json()
-//   })
-//   .then(data => {
-//     this.setState({
-//       shipsData: data.results
-//     })
-//     console.log(data.results)
-//   })
-// }
-
-export default fetchShips
