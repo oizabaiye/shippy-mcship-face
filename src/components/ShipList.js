@@ -8,21 +8,21 @@ class ShipList extends React.Component {
     this.props.dispatch({ type: "MAKE_GREY" })
   }
 
-  componentDidMount() {
-    fetch('https://swapi.co/api/starships/')
-    .then(response => {
-      if (!response.ok) {
-        throw Error(response.statusText)
-      }
-      return response.json()
-    })
-    .then(data => {
-      this.setState({
-        shipsData: data.results
-      })
-      console.log(data.results)
-    })
-  }
+  // componentDidMount() {
+  //   fetch('https://swapi.co/api/starships/')
+  //   .then(response => {
+  //     if (!response.ok) {
+  //       throw Error(response.statusText)
+  //     }
+  //     return response.json()
+  //   })
+  //   .then(data => {
+  //     this.setState({
+  //       shipsData: data.results
+  //     })
+  //     console.log(data.results)
+  //   })
+  // }
 
 
 
