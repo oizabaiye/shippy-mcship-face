@@ -13,6 +13,10 @@
   color: #7FDBFF;
 }
 
+span.bold {
+  font-weight: 500;
+}
+
 h1 {
   font-family: 'Playfair Display SC', serif;
 }

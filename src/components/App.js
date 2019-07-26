@@ -1,5 +1,5 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import './App.css'
 import Header from './Header'
 import ShipList from './ShipList'
 
@@ -9,11 +9,11 @@ function App() {
       <div className="App">
         <Header />
         <main>
-          <ShipList />
+            <ShipList />
         </main>
       </div>
    
-  );
+  )
 }
 
-export default App;
+export default App
