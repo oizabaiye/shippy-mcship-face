@@ -3,32 +3,34 @@ export const FETCH_SUCCESS = 'FETCH_SUCCESS'
 export const FETCH_FAILURE = 'FETCH_FAILURE'
 
 
-const fetchBegin = () => ({
+export const fetchBegin = () => ({
   type: FETCH_BEGIN,
   // payload: { isLoading }
 })
 
-const fetchSuccess = (shipData) => ({
+export const fetchSuccess = (ships) => ({
   type: FETCH_SUCCESS,
-  payload: { shipData }
+  ships
 })
 
-const fetchFailure = (error) => ({
+export const fetchFailure = (error) => ({
   type: FETCH_FAILURE,
-  payload: { error }
+  error
 })
 
-
+ 
 export const fetchShips = () => {
   return dispatch => {
     dispatch(fetchBegin())
+    
     return fetch("https://swapi.co/api/starships/")
       .then(response => response.json())
       .then(jsonData => {
         dispatch(fetchSuccess(jsonData.results))
-        return jsonData.results
+        console.log(jsonData.results)
       })
       .catch(error => dispatch(fetchFailure(error)))
   }
 }
+
 

@@ -1,8 +1,9 @@
+
 import {
   FETCH_BEGIN,
   FETCH_SUCCESS,
   FETCH_FAILURE
-} from './fetchShips'
+} from './shipActions'
 
 const initialState = {
   shipData: [],
@@ -16,35 +17,32 @@ const rootreducer = (state = initialState, action) => {
   switch(action.type) {
     case FETCH_BEGIN:
       return {
-        ...state,
+        ...state, 
         isLoading: true,
         error: null
       }
 
     case FETCH_SUCCESS:
       return {
-        ...state,
-        isLoading: false,
-        shipData: action.payload.shipData
+        ...state, 
+        shipData: action.ships,
+        isLoading: false
       }
 
     case FETCH_FAILURE:
       return {
-        ...state,
+        ...state, 
+        shipData: [],
         isLoading: false,
-        error: action.payload.error,
-        shipData: []
-      }
+        error: action.error
+        }
   
-    case 'MAKE_GREY':
-      return {
-        shipData: state.shipData
-      }
-    
     default:
       return state
 
   }
 }
+
+
 
 export default rootreducer
