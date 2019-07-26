@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header'
-import ShipList from './components/ShipList'
+import Header from './Header'
+import ShipList from './ShipList'
 
 
 function App() {
