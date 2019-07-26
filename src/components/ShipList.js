@@ -17,7 +17,7 @@ class ShipList extends React.Component {
 
     return(
       <div className="shipList">
-        <h2>I am a list of ships!</h2>
+        <h2>A list of starships</h2>
         {this.props.shipData.map(element => {
           return (
             <div className="ship" key={element.model}>

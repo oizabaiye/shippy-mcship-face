@@ -3,17 +3,30 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 30vh;
+  background-color: #111;
+  min-height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 35px;
-  color: white;
+  font-size: 30px;
+  color: #7FDBFF;
+}
+
+h1 {
+  font-family: 'Playfair Display SC', serif;
 }
 
 h2 {
-  color: rebeccapurple;
+  color: #191970;
   font-size: 40px;
+  font-family: 'Playfair Display SC', serif;
 }
+
+p {
+  font-family: 'K2D', sans-serif;
+}
+
+/* 
+font-family: 'Playfair Display SC', serif;
+font-family: 'K2D', sans-serif; */

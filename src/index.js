@@ -10,6 +10,8 @@ import reducer from './reducers/index'
 import { getData } from './actions/index'
 
 
+
+
 const store = createStore(reducer, applyMiddleware(thunk))
 
 store.dispatch(getData())
