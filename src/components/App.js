@@ -4,7 +4,7 @@ import Header from './Header'
 import ShipList from './ShipList'
 
 
-function App() {
+const App = () => {
   return (
       <div className="App">
         <Header />
