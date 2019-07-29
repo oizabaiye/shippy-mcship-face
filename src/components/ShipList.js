@@ -22,7 +22,7 @@ class ShipList extends React.Component {
             {ships.map(ship => {
               return (
                 <div className="ship" key={ship.model}>
-                  <p>Starship: {ship.name}; Model: {ship.model}; Manufacturer: {ship.manufacturer}</p>  
+                  <p>Name: The {ship.name}; Model: {ship.model}. Manufactured by: {ship.manufacturer}</p>  
                 </div>
               )
             })
