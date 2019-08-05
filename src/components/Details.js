@@ -2,12 +2,10 @@ import React from 'react'
 
 class Details extends React.Component {
 
-  render(props) {
+  render() {
     return(
       <div className="details">
-        {props.map(property => {
-          return (<p>{property}</p>)
-        })}
+         <p>{this.props.item.name}</p>
       </div>
     )
   }

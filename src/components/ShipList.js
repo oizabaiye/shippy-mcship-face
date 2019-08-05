@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import ReactPaginate from 'react-paginate'; //failed attempt at pagination
 import './App.css'
 
 
@@ -17,28 +16,20 @@ class ShipList extends React.Component {
       return <div>{error.message}</div>
     }
 
-    const makegrey = {
-      backgroundColor: 'gray'
-    }
-
     return(     
       <div className="shipList">
-        <h2>A list of starships</h2>
         <div>
           {ships.map((ship, index) => {
-            //greyify every 8th ship, excluding ships[0]
-            if ((index + 1) % 8 === 0) {
-              return (
-                <div className="ship" key={ship.model} style={makegrey}>
-                <p>Name: The {ship.name}; Model: {ship.model}. Manufactured by: {ship.manufacturer}</p>  
-                </div>)
-            }
+            console.log(index)
             return (
-              <div className="ship" key={ship.model}>
-                <p>Name: The {ship.name}; Model: {ship.model}. Manufactured by: {ship.manufacturer}</p>  
+              <div className="ship" key={ship.model} item={ship}>
+                <div className="shipText">
+                  <h3>{ship.name}</h3>
+                  <p>Model: {ship.model}</p>
+                  <p>Manufactured by {ship.manufacturer}</p>
+                </div>
               </div>
             )
-
           }) 
         }
         </div>
