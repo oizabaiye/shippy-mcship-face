@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import Header from './Header'
+import Footer from './Footer'
 import ShipList from './ShipList'
 
 
@@ -11,6 +12,7 @@ const App = () => {
         <main>
             <ShipList />
         </main>
+        <Footer />
       </div>
    
   )

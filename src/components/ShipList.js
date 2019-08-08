@@ -2,15 +2,27 @@ import React from 'react'
 import { connect } from 'react-redux'
 import './App.css'
 
-
+ 
 class ShipList extends React.Component {
   render() {
 
     const { ships, isLoading, error } = this.props
 
+    const formatNum = (string) => {
+      let int = parseInt(string, 10)
+      return new Intl.NumberFormat().format(int)
+    }
+
     if (isLoading) {
       return <div>LOADING...</div>
     }
+
+    if (ships) {
+      setTimeout(() => {
+        window.scrollBy(0, 300)
+      })
+    }	    
+  
 
     if (error) {
       return <div>{error.message}</div>
@@ -22,11 +34,18 @@ class ShipList extends React.Component {
           {ships.map((ship, index) => {
             console.log(index)
             return (
+
               <div className="ship" key={ship.model} item={ship}>
+                <div className="icon">
+                  <i className="fab fa-empire fa-3x"></i>
+                </div>
                 <div className="shipText">
                   <h3>{ship.name}</h3>
-                  <p>Model: {ship.model}</p>
-                  <p>Manufactured by {ship.manufacturer}</p>
+                  <p><b>Model:</b> {ship.model}</p>
+                  <p><b>Manufactured by</b> {ship.manufacturer}</p>
+                  <p><b>Capacity:</b> {formatNum(ship.cargo_capacity)} kg</p>
+                  <p><b>Required crew:</b> {formatNum(ship.crew)}</p>
+                  <p><b>Build cost:</b> {formatNum(ship.cost_in_credits)} credits</p>
                 </div>
               </div>
             )
