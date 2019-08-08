@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/shippymcshipface/static/css/main.60bcccbd.chunk.css",
+    "main.js": "/shippymcshipface/static/js/main.b5e5a277.chunk.js",
+    "main.js.map": "/shippymcshipface/static/js/main.b5e5a277.chunk.js.map",
+    "runtime~main.js": "/shippymcshipface/static/js/runtime~main.7c2d3df0.js",
+    "runtime~main.js.map": "/shippymcshipface/static/js/runtime~main.7c2d3df0.js.map",
+    "static/js/2.fef3e536.chunk.js": "/shippymcshipface/static/js/2.fef3e536.chunk.js",
+    "static/js/2.fef3e536.chunk.js.map": "/shippymcshipface/static/js/2.fef3e536.chunk.js.map",
+    "index.html": "/shippymcshipface/index.html",
+    "precache-manifest.346c62d1ed52c17f4f113f93b0fc1ca7.js": "/shippymcshipface/precache-manifest.346c62d1ed52c17f4f113f93b0fc1ca7.js",
+    "service-worker.js": "/shippymcshipface/service-worker.js",
+    "static/css/main.60bcccbd.chunk.css.map": "/shippymcshipface/static/css/main.60bcccbd.chunk.css.map",
+    "static/media/App.css": "/shippymcshipface/static/media/starship.fa13e3e7.jpeg"
+  }
+}
