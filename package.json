@@ -5,10 +5,9 @@
     "node": "10.15.1",
     "npm": "6.4.1"
   },
-  "homepage": "https://oizabaiye.github.io/shippymcshipface",
+  "homepage": "https://ahuoizabaiye.com/shippymcshipface",
   "private": true,
   "dependencies": {
-    "gh-pages": "^2.1.0",
     "history": "^4.9.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -41,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
   }
 }
