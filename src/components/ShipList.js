@@ -9,21 +9,18 @@ class ShipList extends React.Component {
     const { ships, isLoading, error } = this.props
 
     const formatNum = (string) => {
-      let int = parseInt(string, 10)
-      return new Intl.NumberFormat().format(int)
+      if (string === "unknown") {
+        return "Unknown"
+      } else {
+        let int = parseInt(string, 10)
+        return new Intl.NumberFormat().format(int)
+      }
     }
 
     if (isLoading) {
       return <div>LOADING...</div>
-    }
-
-    if (ships) {
-      setTimeout(() => {
-        window.scrollBy(0, 300)
-      })
     }	    
   
-
     if (error) {
       return <div>{error.message}</div>
     }
